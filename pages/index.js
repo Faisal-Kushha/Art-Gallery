@@ -37,7 +37,7 @@ export default function Home() {
   }
   return (
     <>
-      <h1>Welcome to the Art Gallery please login to proceed</h1>
+      <h1>Welcome to the Art Gallery please login to proceed!</h1>
       <Link href="/api/auth/login">
         <Button variant="success">Login</Button>
       </Link>
