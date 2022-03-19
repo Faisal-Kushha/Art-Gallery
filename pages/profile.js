@@ -2,8 +2,8 @@ import React from "react";
 import { useUser } from "@auth0/nextjs-auth0";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
-import NavBar from "./navbar";
-import Footer from "./footer";
+import NavBar from "../components/navbar";
+import Footer from "../components/footer";
 export default function Profile() {
   const { user, error, isLoading } = useUser();
 

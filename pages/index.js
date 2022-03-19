@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { useUser } from "@auth0/nextjs-auth0";
 import Button from "react-bootstrap/Button";
-import NavBar from "./navbar";
-import Search from "./search";
+import NavBar from "../components/navbar";
+import Search from "../components/search";
 import styles from "../styles/Home.module.css";
-import Footer from "./footer";
+import Footer from "../components/footer";
 import Link from "next/link";
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
               name="viewport"
               content="width=device-width, initial-scale=1"
             />{" "}
-            <link rel="icon" href="/favicon.ico" />
+            <Link rel="icon" href="/favicon.ico" />
           </Head>
           <Search />
 
