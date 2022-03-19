@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 import { createApi } from "unsplash-js";
 import like from "../photo/like.png";
 import like2 from "../photo/like2.png";
-
+import Image from "next/image";
 export default function Search() {
   const [data, setData] = useState([]);
   const [query, setQuery] = useState(null);
@@ -92,12 +92,22 @@ export default function Search() {
                       >
                         {obj.id === isLike && (
                           <span>
-                            <img src={like2.src} width="23px" height="23px" />
+                            <Image
+                              src={like2.src}
+                              alt="Like Button"
+                              width={23}
+                              height={23}
+                            />
                           </span>
                         )}
                         {obj.id != isLike && (
                           <span>
-                            <img src={like.src} width="23px" height="23px" />
+                            <Image
+                              src={like.src}
+                              alt="Dislike Button"
+                              width={23}
+                              height={23}
+                            />
                           </span>
                         )}
                       </div>

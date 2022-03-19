@@ -1,7 +1,7 @@
 import Navbar from "react-bootstrap/Navbar";
 import { useUser } from "@auth0/nextjs-auth0";
 import Button from "react-bootstrap/Button";
-
+import Link from "next/link";
 export default function NavBar() {
   const { user } = useUser();
 
@@ -10,12 +10,12 @@ export default function NavBar() {
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Navbar.Brand>Art Gallery</Navbar.Brand>
 
-        <a href="/">
+        <Link href="/">
           <Button variant="success">Home</Button>
-        </a>
-        <a href="/profile">
+        </Link>
+        <Link href="/profile">
           <Button variant="danger">Profile</Button>
-        </a>
+        </Link>
       </Navbar>
     )
   );

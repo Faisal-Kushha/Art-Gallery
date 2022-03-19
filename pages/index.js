@@ -5,6 +5,7 @@ import NavBar from "./navbar";
 import Search from "./search";
 import styles from "../styles/Home.module.css";
 import Footer from "./footer";
+import Link from "next/link";
 
 export default function Home() {
   const { user, error, isLoading } = useUser();
@@ -16,9 +17,9 @@ export default function Home() {
       <>
         <NavBar />
         <h1>Welcome {user.name} to Art Gallery</h1>
-        <a href="/api/auth/logout">
+        <Link href="/api/auth/logout">
           <Button variant="success">Logout</Button>
-        </a>
+        </Link>
         <div className={styles.container}>
           <Head>
             <title>Art Gallery</title>
@@ -38,10 +39,10 @@ export default function Home() {
   return (
     <>
       <h1>Welcome to the Art Gallery please login to proceed</h1>
-      <a href="/api/auth/login">
+      <Link href="/api/auth/login">
         {" "}
         <Button variant="success">Login</Button>
-      </a>
+      </Link>
     </>
   );
 }
