@@ -26,8 +26,7 @@ export default function Home() {
             <meta
               name="viewport"
               content="width=device-width, initial-scale=1"
-            />{" "}
-            <Link rel="icon" href="/favicon.ico" />
+            />
           </Head>
           <Search />
 
@@ -40,7 +39,6 @@ export default function Home() {
     <>
       <h1>Welcome to the Art Gallery please login to proceed</h1>
       <Link href="/api/auth/login">
-        {" "}
         <Button variant="success">Login</Button>
       </Link>
     </>
