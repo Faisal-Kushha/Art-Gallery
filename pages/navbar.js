@@ -14,7 +14,7 @@ export default function NavBar() {
           <Button variant="success">Home</Button>
         </a>
         <a href="/profile">
-          <Button variant="success">Profile</Button>
+          <Button variant="danger">Profile</Button>
         </a>
       </Navbar>
     )
