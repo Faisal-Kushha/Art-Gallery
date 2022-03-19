@@ -6,7 +6,7 @@ import Search from "../components/search";
 import styles from "../styles/Home.module.css";
 import Footer from "../components/footer";
 import Link from "next/link";
-
+import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 export default function Home() {
   const { user, error, isLoading } = useUser();
 
@@ -44,3 +44,4 @@ export default function Home() {
     </>
   );
 }
+export const getServerSideProps = withPageAuthRequired();
